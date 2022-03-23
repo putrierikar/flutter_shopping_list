@@ -2,5 +2,5 @@ class Item{
   String name;
   int price;
 
-  Item({this.name, this.price});
+  Item({required this.name, required this.price});
 }
