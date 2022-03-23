@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shopping_list/models/item.dart';
 
-class ItemPage extends StatelessWidget {
+class ItemPage extends StatefulWidget {
   const ItemPage({ Key? key }) : super(key: key);
 
+  @override
+  State<ItemPage> createState() => _ItemPageState();
+}
+
+class _ItemPageState extends State<ItemPage> {
   @override
   Widget build(BuildContext context) {
     final Item itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
@@ -11,10 +16,12 @@ class ItemPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Shopping List'),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          margin: const EdgeInsets.all(8),
-          child: Text(itemArgs.name+ ' with ' +itemArgs.price.toString()),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Container(
+            margin: const EdgeInsets.all(8),
+            child: Text(itemArgs.name+ ' with ' +itemArgs.price.toString()),
+          ),
         ),
       ),
     );
