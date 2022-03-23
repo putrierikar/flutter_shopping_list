@@ -18,10 +18,7 @@ class _ItemPageState extends State<ItemPage> {
       ),
       body: Center(
         child: SingleChildScrollView(
-          child: Container(
-            margin: const EdgeInsets.all(8),
-            child: Text(itemArgs.name+ ' with ' +itemArgs.price.toString()),
-          ),
+          child: Text(itemArgs.name+ ' with ' +itemArgs.price.toString()),
         ),
       ),
     );
