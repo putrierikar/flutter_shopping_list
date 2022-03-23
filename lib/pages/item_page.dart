@@ -13,7 +13,8 @@ class ItemPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.all(8),
+          margin: const EdgeInsets.all(8),
+          child: Text(itemArgs.name+ ' with ' +itemArgs.price.toString()),
         ),
       ),
     );

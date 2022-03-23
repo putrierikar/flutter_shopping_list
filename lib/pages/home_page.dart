@@ -16,9 +16,9 @@ class HomePage extends StatelessWidget {
         title: const Text('Shopping List'),
       ),
       body: Container(
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         child: ListView.builder(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           itemCount: items.length,
           itemBuilder: (context, index) {
             final item = items[index];
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
               },
               child: Card(
                 child: Container(
-                  margin: EdgeInsets.all(8),
+                  margin: const EdgeInsets.all(8),
                   child: Row(
                     children: [
                       Expanded(
